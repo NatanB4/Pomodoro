@@ -1,0 +1,231 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    color: #fff;
+    height: 100vh;
+    max-width: 100%;
+    grid-template-columns: 2fr 1fr;
+}
+
+.container_pomodoro {
+    background-color: #121820;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60%;
+    margin-left: 7em;
+}
+
+.container_tasks {
+    margin-left: -5em;
+    background-color: transparent;
+    overflow-y: scroll;
+}
+
+.numbers {
+    color: #F41E63;
+    margin: 0 auto;
+    margin-top: -9em;
+}
+
+.numbers span {
+    font-size: 11em;
+}
+
+.container_buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 56px;
+    text-decoration: none;
+    background-color: #E60965;
+    border-radius: 5em;
+    transition: 1s ease;
+    border-style: none;
+    cursor: pointer;
+}
+
+.button_shaft {
+    position: relative;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E60965;
+    border-radius: 5em;
+    transition: 1s ease;
+    border-style: none;
+    cursor: pointer;
+    margin: 0 1em;
+    width: 4em;
+
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+}
+
+
+.container_input {
+    margin: 0 auto;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 74%;
+}
+
+.container_input input {
+    border-style: none;
+    border-radius: 2em;
+    padding: 10px 40px;
+    background-color: #fff;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+}
+
+.container_input input:hover {
+    border-style: none;
+}
+
+.container_input button {
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #E60965;
+    border-radius: 5em;
+    transition: 1s ease;
+    border-style: none;
+    cursor: pointer;
+}
+
+.container_input button:hover {
+    color: #000;
+    background-color: #FFA1C9;
+}
+
+.container_task {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.container_task hr {
+    padding: 0 20px;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20em;
+    height: 6em;
+    margin: 2em;
+    padding: 5%;
+    background-color: #E60965;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+}
+
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+.task p {
+   padding: 0px 10px;
+   line-height: 20px;
+   overflow: hidden;
+}
+
+.container_input_checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container_input_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+
+/* On mouse-over, add a grey background color */
+.container_input_checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container_input_checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container_input_checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container_input_checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.animate{
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running; 
+}
