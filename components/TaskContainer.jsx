@@ -13,8 +13,8 @@ export default function TaskContainer(props) {
         <div className={styles.container_tasks}>
             {array.map((el,i) => {
                 return (
-                    <div className={styles.animate} >
-                        <Task removeTask={removeTask} nome={el.nome} key={i} task={el} />
+                    <div className={styles.animate} key={i}>
+                        <Task removeTask={removeTask} nome={el.nome} task={el} />
                     </div>
                 )
             })}
