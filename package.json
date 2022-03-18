@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "crypto": "^1.0.1",
     "firebase": "^9.6.7",
     "firebase-admin": "^10.0.2",
     "js-cookie": "^3.0.1",
